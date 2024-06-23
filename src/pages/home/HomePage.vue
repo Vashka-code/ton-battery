@@ -1,10 +1,11 @@
 <template>
   <base-header></base-header>
-  <what-is-it></what-is-it>
+  <eco-system></eco-system>
+  <about-battery></about-battery>
 </template>
 
 <script setup lang="ts">
-import { BaseHeader, WhatIsIt } from '@/widgets'
+import { BaseHeader, EcoSystem, AboutBattery } from '@/widgets'
 </script>
 
 <style lang="scss"></style>

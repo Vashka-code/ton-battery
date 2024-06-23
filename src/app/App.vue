@@ -10,6 +10,8 @@ import { Homepage } from '@/pages'
 body {
   color: #8994a3;
   background: #10161f;
+  font-size: 16px;
+  line-height: 1.5;
   font-family:
     Inter,
     -apple-system,
@@ -23,5 +25,9 @@ body {
     'Droid Sans',
     'Helvetica Neue',
     sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 </style>

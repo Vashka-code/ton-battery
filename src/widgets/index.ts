@@ -1,4 +1,5 @@
 import BaseHeader from './baseHeader/BaseHeader.vue'
-import WhatIsIt from './whatIsIt/WhatIsIt.vue'
+import EcoSystem from './ecoSystem/EcoSystem.vue'
+import AboutBattery from './aboutBattery/AboutBattery.vue'
 
-export { BaseHeader, WhatIsIt }
+export { BaseHeader, EcoSystem, AboutBattery }

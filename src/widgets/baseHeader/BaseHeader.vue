@@ -5,6 +5,7 @@
       <div class="battery" :style="{ '--animation-duration': animationDuration + 'ms' }"></div>
       <div class="header__feature">{{ featureInitialText }}</div>
     </div>
+    <demarcation-line></demarcation-line>
   </header>
 </template>
 
@@ -15,6 +16,7 @@ const featureInitialText = ref('')
 const featureFinalText = 'New Tonkeeper feature - battery'
 const typingDelay = 100
 
+// TODO add composable
 const animationDuration = ref(typingDelay * (featureFinalText.length + 2))
 
 const typeText = () => {
@@ -62,14 +64,6 @@ onMounted(() => {
     transform: translateY(-80%);
   }
 
-  &::after {
-    content: '';
-    height: 1px;
-    width: 100%;
-    display: block;
-    background: linear-gradient(90deg, transparent, #1d2633 50%, transparent);
-  }
-
   &__content {
     position: relative;
     width: 100%;
@@ -89,6 +83,16 @@ onMounted(() => {
     color: #45aef5;
 
     max-width: 90%;
+
+    &::after {
+      content: '|';
+      animation: feature_cursor 1.1s infinite step-start;
+      display: inline-block;
+      width: 6px;
+      border-radius: 3px;
+      font-weight: 300;
+      background-color: var(--accentBlue);
+    }
   }
 }
 
@@ -123,6 +127,12 @@ onMounted(() => {
   }
   100% {
     content: '\f240';
+  }
+}
+
+@keyframes feature_cursor {
+  50% {
+    opacity: 0;
   }
 }
 </style>

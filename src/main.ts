@@ -1,4 +1,4 @@
-import 'reset-css'
+import 'normalize.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 import '@fortawesome/fontawesome-free/css/all.css'
