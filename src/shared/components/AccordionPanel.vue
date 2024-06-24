@@ -14,15 +14,16 @@
       </div>
     </transition>
   </div>
+  <demarcation-line></demarcation-line>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
 
 const props = defineProps<{
-  showElement: boolean
+  showElement?: boolean
 }>()
 
-const showElement = ref(props.showElement || false)
+const showElement = ref(props.showElement ?? false)
 
 const handleAccordion = () => {
   showElement.value = !showElement.value

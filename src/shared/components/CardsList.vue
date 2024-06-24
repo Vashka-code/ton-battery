@@ -1,3 +1,5 @@
+<!-- TODO: split carditem and cardlist to different components -->
+
 <template>
   <ul class="list">
     <li v-for="(item, index) in props.list" :key="index" class="item">
