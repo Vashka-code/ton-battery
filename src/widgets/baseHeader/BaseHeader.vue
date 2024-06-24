@@ -16,7 +16,7 @@ const featureInitialText = ref('')
 const featureFinalText = 'New Tonkeeper feature - battery'
 const typingDelay = 100
 
-// TODO add composable
+// TODO add to the composable and change battery animation logic, animaition should start only when user can see this battery
 const animationDuration = ref(typingDelay * (featureFinalText.length + 2))
 
 const typeText = () => {

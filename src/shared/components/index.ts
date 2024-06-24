@@ -4,6 +4,7 @@ import CardsList from './CardsList.vue'
 import DemarcationLine from './DemarcationLine.vue'
 import BaseTooltip from './BaseTooltip.vue'
 import TileList from './TileList.vue'
+import AccordionPanel from './AccordionPanel.vue'
 
 export default [
   ['base-container', BaseContainer],
@@ -11,5 +12,6 @@ export default [
   ['cards-list', CardsList],
   ['demarcation-line', DemarcationLine],
   ['base-tooltip', BaseTooltip],
-  ['tile-list', TileList]
+  ['tile-list', TileList],
+  ['accordion-panel', AccordionPanel]
 ]
