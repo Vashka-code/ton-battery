@@ -10,6 +10,6 @@ h2 {
   font-size: 44px;
   font-weight: 700;
   line-height: 54px;
-  color: #fff;
+  color: var(--title-color);
 }
 </style>

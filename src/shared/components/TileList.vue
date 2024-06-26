@@ -14,7 +14,6 @@ const props = defineProps<{
 }>()
 </script>
 <style lang="scss" scoped>
-// TODO: create item-card? and add css variables
 .tile-list {
   padding: 0;
   list-style: none;
@@ -24,14 +23,14 @@ const props = defineProps<{
   &__item {
     padding: 30px;
     border-radius: 15px;
-    background-color: #0a121d;
+    background-color: var(--main-bg-color);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   }
 
   &__title {
     margin: 0;
     font-size: 30px;
-    color: #fff;
+    color: var(--title-color);
   }
 
   &__block {

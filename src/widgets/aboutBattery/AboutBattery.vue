@@ -1,6 +1,9 @@
 <template>
-  <base-container>
-    <base-title>About Battery</base-title>
+  <base-section>
+    <template #title>
+      <span class="about-title">About Battery <battery-animation :animationDuration="2000" /></span>
+    </template>
+
     <p>
       This feature is designed to optimize the handling of
       <base-tooltip>
@@ -17,10 +20,11 @@
     <h2>Purpose of the Battery Feature</h2>
 
     <tile-list :list="list"></tile-list>
-  </base-container>
+  </base-section>
   <demarcation-line></demarcation-line>
 </template>
 <script setup lang="ts">
+import BatteryAnimation from '@/entities/components/battery/BatteryAnimation.vue'
 import { ref, type Ref } from 'vue'
 
 const list: Ref<TileItem[]> = ref([
@@ -71,6 +75,13 @@ p {
   margin-top: 15px;
 }
 h2 {
-  color: #fff;
+  color: var(--title-color);
+}
+
+.about-title {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 </style>

@@ -64,8 +64,8 @@ const { showTooltip, hideTooltip, visible, tooltipStyles } = useTooltip(
     padding-top: 10px;
 
     #{$self}__content-inner {
-      background-color: #0a121d;
-      color: #fff;
+      background-color: var(--main-bg-color);
+      color: var(--title-color);
       border-radius: 15px;
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
       opacity: 0;

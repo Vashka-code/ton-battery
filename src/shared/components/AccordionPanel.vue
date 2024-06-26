@@ -9,25 +9,46 @@
       />
     </div>
     <transition name="fade">
-      <div class="accordion__body" v-if="showElement">
+      <div
+        class="accordion__body"
+        v-show="showElement"
+        ref="accordionBody"
+        :style="{ '--animation-padding': `${padding}px` }"
+      >
         <slot></slot>
       </div>
     </transition>
   </div>
-  <demarcation-line></demarcation-line>
 </template>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { nextTick, onMounted, ref, watch } from 'vue'
 
 const props = defineProps<{
   showElement?: boolean
 }>()
 
 const showElement = ref(props.showElement ?? false)
+const accordionBody = ref<HTMLElement | null>(null)
+const padding = 20
 
 const handleAccordion = () => {
   showElement.value = !showElement.value
 }
+
+const updateMaxHeight = async () => {
+  await nextTick()
+  if (accordionBody.value) {
+    const targetHeight = showElement.value
+      ? `${accordionBody.value.scrollHeight + padding * 2}px`
+      : '0px'
+    accordionBody.value.style.maxHeight = targetHeight
+  }
+}
+watch(showElement, updateMaxHeight)
+
+onMounted(() => {
+  updateMaxHeight()
+})
 </script>
 <style lang="scss" scoped>
 .accordion {
@@ -38,8 +59,8 @@ const handleAccordion = () => {
 
   &__header {
     width: 100%;
-    background-color: #070f1b;
-    color: #fff;
+    background-color: var(--secondary-bg-color);
+    color: var(--title-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,9 +76,11 @@ const handleAccordion = () => {
 
   &__body {
     border-top: 2px solid #000;
-    background-color: #0a111b;
-    padding: 20px;
+    background-color: var(--third-bg-color);
     border-radius: 0 0 10px 10px;
+    transition: max-height 0.5s ease;
+    padding: var(--animation-padding);
+    overflow: hidden;
   }
 
   &__icon {
@@ -72,14 +95,14 @@ const handleAccordion = () => {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+  max-height: auto;
+  padding: var(--animation-padding);
+  transition: 0.5s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(-30px);
+  padding: 0;
 }
 </style>

@@ -1,10 +1,9 @@
-<!-- TODO: create a standard component wrapper with base-container, base-title, demacration line and etc. -->
 <template>
-  <base-container>
-    <base-title>Battery Benefits</base-title>
+  <base-section>
+    <template #title> Battery Benefits </template>
+
     <cards-swiper :list="list" />
-  </base-container>
-  <demarcation-line></demarcation-line>
+  </base-section>
 </template>
 <script setup lang="ts">
 import CardsSwiper from '@/entities/components/CardsSwiper.vue'
@@ -12,35 +11,34 @@ import { ref } from 'vue'
 
 const list = ref([
   {
-    title: 'Multichain Architecture',
-    text: 'Combines a masterchain with multiple workchains, enabling high throughput and scalability.',
-    icons: ['fas', 'sitemap']
+    title: 'Dynamic Gas Management',
+    text: `The feature dynamically adjusts gas settings to reflect current network conditions, helping users avoid unnecessary costs and making the most out of their Toncoin.`,
+    icons: ['fas', 'car']
   },
   {
-    title: 'Dynamic Sharding',
-    text: 'Facilitates efficient transaction processing and network growth.',
-    icons: ['fas', 'handshake']
-  },
-  {
-    title: 'Native Cryptocurrency',
-    text: 'Used for transactions, staking, and governance within the TON network. Key Features',
+    title: 'Economic Transactions',
+    text: 'By optimizing gas usage, users can execute transactions more economically, allowing them to perform more operations without incurring high fees.',
     icons: ['fas', 'coins']
   },
   {
-    title: 'Scalability',
-    text: 'Capable of handling millions of transactions per second with dynamic sharding.',
-    icons: ['fas', 'up-right-and-down-left-from-center']
+    title: 'Faster Confirmations',
+    text: 'Efficient gas management leads to quicker transaction confirmations as the feature calculates the optimal gas required to get transactions processed promptly.',
+    icons: ['fas', 'fa-person-running']
   },
   {
-    title: 'Security',
-    text: 'Utilizes a Proof-of-Stake consensus mechanism and advanced encryption for robust security.',
-    icons: ['fas', 'lock']
+    title: 'Reduced Failed Transactions',
+    text: 'With better control over gas settings, the likelihood of failed or stuck transactions due to insufficient gas is minimized, enhancing reliability.',
+    icons: ['fas', 'fa-chart-gantt']
   },
   {
-    title: 'User Experience',
-    size: 'full',
-    text: 'Provides near-instant transaction processing and a user-friendly interface for developers and end-users. The TON ecosystem combines advanced blockchain technology with a user-centric approach, making it ideal for scalable applications and services in the decentralized digital economy.',
-    icons: ['fas', 'users']
+    title: 'Clear Breakdown',
+    text: 'Users can see a clear breakdown of how gas fees are being calculated and used, providing better transparency into the costs associated with each transaction.',
+    icons: ['fas', 'clover']
+  },
+  {
+    title: 'Customizable Options',
+    text: 'The feature allows users to customize their gas settings according to their priorities, whether it’s speed or cost, giving them greater control over their transactions.',
+    icons: ['fas', 'gear']
   }
 ])
 </script>

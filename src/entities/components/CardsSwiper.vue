@@ -1,16 +1,15 @@
 <template>
   <swiper-container
-    :loop="true"
     :modules="modules"
     :autoplay="true"
-    :width="'auto'"
-    :delay="3000"
+    :delay="1000"
     :space-between="30"
     :slidesPerView="'auto'"
+    :loop="true"
     class="swiper"
   >
     <swiper-slide class="swiper__slide" v-for="(item, index) in props.list" :key="index">
-      <cards-list :list="[item]" />
+      <card-item :item="item" />
     </swiper-slide>
   </swiper-container>
 </template>
@@ -28,7 +27,8 @@ register()
 <style lang="scss" scoped>
 .swiper {
   &__slide {
-    width: 50%;
+    width: calc(50% - 15px);
+    padding: 0 10px;
   }
 }
 </style>

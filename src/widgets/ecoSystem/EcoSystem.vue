@@ -1,6 +1,7 @@
 <template>
-  <base-container>
-    <base-title>First of all about Ton Ecosystem</base-title>
+  <base-section>
+    <template #title> First of all about Ton Ecosystem </template>
+
     <p>
       The TON (The Open Network) ecosystem is a comprehensive, scalable, and secure blockchain
       platform initially developed by Telegram. It is designed to support a diverse range of
@@ -8,8 +9,7 @@
     </p>
     <h2>Key Features:</h2>
     <cards-list :list="list"></cards-list>
-  </base-container>
-  <demarcation-line></demarcation-line>
+  </base-section>
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue'
@@ -55,7 +55,7 @@ p {
 }
 
 h2 {
-  color: #fff;
+  color: var(--title-color);
   margin-top: 25px;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <base-container>
-    <base-title>How to Use:</base-title>
+  <base-section>
+    <template #title> How to Use: </template>
 
     <div class="accordions">
       <accordion-panel :showElement="true">
@@ -43,7 +43,7 @@
         option for you.
       </accordion-panel>
     </div>
-  </base-container>
+  </base-section>
 </template>
 <script lang="ts" setup></script>
 <style lang="scss" scoped>
@@ -67,6 +67,10 @@ img {
     flex-wrap: wrap;
     margin-top: 10px;
     gap: 10px;
+
+    img {
+      min-height: 400px;
+    }
   }
 }
 </style>

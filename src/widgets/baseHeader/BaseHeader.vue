@@ -1,38 +1,32 @@
 <template>
-  <header class="header">
+  <header class="header" ref="header">
     <div class="header__content">
       <img src="./assets/ton-logo.svg" alt="" />
       <div class="battery" :style="{ '--animation-duration': animationDuration + 'ms' }"></div>
-      <div class="header__feature">{{ featureInitialText }}</div>
+      <battery-animation :animationDuration="animationDuration" />
+      <div class="header__feature">{{ featureText }}</div>
     </div>
     <demarcation-line></demarcation-line>
   </header>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import BatteryAnimation from '@/entities/components/battery/BatteryAnimation.vue'
+import { useIsVisisble } from '@/entities/components/battery/composables/useIsVisisble'
+import { ref } from 'vue'
+import { useTypeAnimation } from './composable/useTypeAnimation'
 
-const featureInitialText = ref('')
+const featureText = ref('')
 const featureFinalText = 'New Tonkeeper feature - battery'
 const typingDelay = 100
+const header = ref<HTMLElement | null>(null)
 
-// TODO add to the composable and change battery animation logic, animaition should start only when user can see this battery
 const animationDuration = ref(typingDelay * (featureFinalText.length + 2))
 
-const typeText = () => {
-  let index = 0
-  const intervalId = setInterval(() => {
-    if (index < featureFinalText.length) {
-      featureInitialText.value += featureFinalText[index]
-      index++
-    } else {
-      clearInterval(intervalId)
-    }
-  }, 100)
-}
-
-onMounted(() => {
-  typeText()
+useIsVisisble(header, () => {
+  useTypeAnimation(featureFinalText, typingDelay, (text) => {
+    featureText.value = text
+  })
 })
 </script>
 
@@ -80,7 +74,7 @@ onMounted(() => {
     font-size: 80px;
     font-weight: 700;
     line-height: 100px;
-    color: #45aef5;
+    color: var(--battery-color);
 
     max-width: 90%;
 
@@ -93,40 +87,6 @@ onMounted(() => {
       font-weight: 300;
       background-color: var(--accentBlue);
     }
-  }
-}
-
-.battery {
-  font-size: 72px;
-
-  &::before {
-    font-family: 'Font Awesome 5 Free';
-    content: '\f244';
-    font-weight: 900;
-    animation-name: battery;
-    animation-duration: var(--animation-duration);
-    animation-fill-mode: forwards;
-    color: #45aef5;
-    display: inline-block;
-  }
-}
-
-@keyframes battery {
-  20% {
-    content: '\f244';
-    color: #c0392b;
-  }
-  40% {
-    content: '\f243';
-  }
-  60% {
-    content: '\f242';
-  }
-  80% {
-    content: '\f241';
-  }
-  100% {
-    content: '\f240';
   }
 }
 
