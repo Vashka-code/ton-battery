@@ -34,6 +34,7 @@ useIsVisisble(header, () => {
 .header {
   --animation-duration: 3.5ms;
   height: 100dvh;
+  padding: 20px 0;
 
   &::before {
     content: '';
@@ -68,15 +69,31 @@ useIsVisisble(header, () => {
     gap: 20px;
     justify-content: center;
     flex-direction: column;
+
+    @media screen and (max-width: 700px) {
+      gap: 12px;
+    }
   }
 
   &__feature {
     font-size: 80px;
     font-weight: 700;
-    line-height: 100px;
+    line-height: 1.2;
     color: var(--battery-color);
-
     max-width: 90%;
+    text-align: center;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 70px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 60px;
+    }
+
+    @media screen and (max-width: 560px) {
+      font-size: 40px;
+    }
 
     &::after {
       content: '|';

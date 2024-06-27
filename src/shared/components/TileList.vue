@@ -20,21 +20,34 @@ const props = defineProps<{
   display: flex;
   flex-direction: column;
   gap: 40px;
+
   &__item {
     padding: 30px;
     border-radius: 15px;
     background-color: var(--main-bg-color);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+    @media screen and (max-width: 768px) {
+      padding: 20px;
+    }
   }
 
   &__title {
     margin: 0;
     font-size: 30px;
     color: var(--title-color);
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__block {
     margin-top: 10px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
 </style>

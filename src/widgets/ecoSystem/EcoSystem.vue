@@ -52,6 +52,11 @@ const list = ref([
 p {
   margin-top: 25px;
   font-size: 19px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 17px;
+  }
 }
 
 h2 {

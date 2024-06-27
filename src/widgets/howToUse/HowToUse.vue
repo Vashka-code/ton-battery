@@ -69,7 +69,8 @@ img {
     gap: 10px;
 
     img {
-      min-height: 400px;
+      width: 200px;
+      aspect-ratio: 576/1217;
     }
   }
 }

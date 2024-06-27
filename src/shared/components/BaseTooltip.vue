@@ -49,7 +49,7 @@ const { showTooltip, hideTooltip, visible, tooltipStyles } = useTooltip(
     color: inherit;
     background-color: transparent;
     text-decoration: underline;
-    font-size: 19px;
+    font-size: inherit;
     border: none;
     outline: none;
   }

@@ -22,14 +22,26 @@ const props = defineProps<{
   background-color: var(--main-bg-color);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 
+  @media screen and (max-width: 768px) {
+    padding: 20px;
+  }
+
   &__title {
     font-size: 24px;
     color: var(--title-color);
     font-weight: 500;
+
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+    }
   }
 
   &__text {
     display: block;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   &__content {

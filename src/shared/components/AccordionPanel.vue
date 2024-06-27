@@ -21,7 +21,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { nextTick, onMounted, ref, watch } from 'vue'
+import { nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 
 const props = defineProps<{
   showElement?: boolean
@@ -48,6 +48,11 @@ watch(showElement, updateMaxHeight)
 
 onMounted(() => {
   updateMaxHeight()
+  window.addEventListener('resize', updateMaxHeight)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateMaxHeight)
 })
 </script>
 <style lang="scss" scoped>
@@ -72,6 +77,10 @@ onMounted(() => {
     position: relative;
     z-index: 3;
     border-radius: 10px 10px 0 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   &__body {
@@ -96,13 +105,13 @@ onMounted(() => {
 .fade-enter-active,
 .fade-leave-active {
   max-height: auto;
-  padding: var(--animation-padding);
+  padding: var(--animation-padding) 20px;
   transition: 0.5s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  padding: 0;
+  padding: 0 20px;
 }
 </style>

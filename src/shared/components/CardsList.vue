@@ -22,8 +22,16 @@ const props = defineProps<{
   margin: 0;
   list-style: none;
 
+  @media screen and (max-width: 950px) {
+    gap: 20px;
+  }
+
   &__item {
     width: 48%;
+
+    @media screen and (max-width: 950px) {
+      width: 100%;
+    }
   }
 }
 </style>

@@ -73,7 +73,12 @@ const list: Ref<TileItem[]> = ref([
 p {
   font-size: 19px;
   margin-top: 15px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 }
+
 h2 {
   color: var(--title-color);
 }
@@ -82,6 +87,5 @@ h2 {
   display: flex;
   gap: 20px;
   align-items: center;
-  flex-wrap: wrap;
 }
 </style>

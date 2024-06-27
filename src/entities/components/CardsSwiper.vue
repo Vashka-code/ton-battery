@@ -29,6 +29,10 @@ register()
   &__slide {
     width: calc(50% - 15px);
     padding: 0 10px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 </style>

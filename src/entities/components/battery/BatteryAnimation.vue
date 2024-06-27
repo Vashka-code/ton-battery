@@ -25,6 +25,10 @@ useIsVisisble(battery, () => {
 .battery {
   font-size: 72px;
 
+  @media screen and (max-width: 768px) {
+    font-size: 66px;
+  }
+
   &::before {
     font-family: 'Font Awesome 5 Free';
     content: '\f244';

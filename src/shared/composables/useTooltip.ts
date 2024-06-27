@@ -21,8 +21,23 @@ export function useTooltip(
       const containerRect = tooltipContainer.value.getBoundingClientRect()
       const contentRect = tooltipContent.value.getBoundingClientRect()
 
+      let left = containerRect.width / 2 - contentRect.width / 2
+
+      console.log()
+
+      if (containerRect.left + left < 0) {
+        left = -containerRect.left
+      } else if (
+        containerRect.right + (contentRect.width - containerRect.width) / 2 >
+        window.innerWidth
+      ) {
+        left = -(containerRect.width / 2)
+      } else if (containerRect.left + left + contentRect.width > window.innerWidth) {
+        left = window.innerWidth - containerRect.left - contentRect.width
+      }
+
       tooltipStyles.value = {
-        left: `${containerRect.width / 2 - contentRect.width / 2}px`
+        left: `${left}px`
       }
     }
   }
