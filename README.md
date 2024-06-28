@@ -1,3 +1,9 @@
+# Project for Tonkeeper competition for Web Developers
+
+## Selected Technologies: Vue 3, FSD Architecture, TypeScript
+
+I decided to combine two useful endeavors into one: try out the architecture in a new project, while continuing to work with Vue 3. I am fully aware that these technologies are unnecessary for this task, but theoretically, if we consider this site as a foundation and on its basis we can efforts to create a well-supported and easily scalable front-end application without thinking about the approach and architecture.
+
 # ./
 
 This template should help get you started developing with Vue 3 in Vite.
