@@ -4,8 +4,8 @@
 
     <p>
       The TON (The Open Network) ecosystem is a comprehensive, scalable, and secure blockchain
-      platform initially developed by Telegram. It is designed to support a diverse range of
-      decentralized applications (dApps), services, and digital assets.
+      platform initially developed by <strong> Telegram</strong>. It is designed to support a
+      diverse range of decentralized applications (dApps), services, and digital assets.
     </p>
     <h2>Key Features:</h2>
     <cards-list :list="list"></cards-list>
@@ -27,7 +27,7 @@ const list = ref([
   },
   {
     title: 'Native Cryptocurrency',
-    text: 'Used for transactions, staking, and governance within the TON network. Key Features',
+    text: 'Used for transactions, staking, and governance within the TON network.',
     icons: ['fas', 'coins']
   },
   {
@@ -36,15 +36,15 @@ const list = ref([
     icons: ['fas', 'up-right-and-down-left-from-center']
   },
   {
-    title: 'Security',
-    text: 'Utilizes a Proof-of-Stake consensus mechanism and advanced encryption for robust security.',
-    icons: ['fas', 'lock']
-  },
-  {
     title: 'User Experience',
     size: 'full',
     text: 'Provides near-instant transaction processing and a user-friendly interface for developers and end-users. The TON ecosystem combines advanced blockchain technology with a user-centric approach, making it ideal for scalable applications and services in the decentralized digital economy.',
     icons: ['fas', 'users']
+  },
+  {
+    title: 'Security',
+    text: 'Utilizes a Proof-of-Stake consensus mechanism and advanced encryption for robust security.',
+    icons: ['fas', 'lock']
   }
 ])
 </script>

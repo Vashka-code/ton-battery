@@ -15,7 +15,10 @@
         </template>
       </base-tooltip>
       and provide users with a smoother, more cost-effective experience when performing operations
-      on the blockchain.
+      on the blockchain. Examples: <br />
+      <span class="uppercase">
+        Token swaps require ~50 charges, token transfers ~10 charges, and NFT transfers ~4 charges.
+      </span>
     </p>
     <h2>Purpose of the Battery Feature</h2>
 
@@ -87,5 +90,9 @@ h2 {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 </style>

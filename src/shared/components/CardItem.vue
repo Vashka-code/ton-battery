@@ -52,6 +52,10 @@ const props = defineProps<{
   &__icon {
     color: rgb(69, 174, 245);
     font-size: 26px;
+
+    @media screen and (max-width: 768px) {
+      max-width: 26px;
+    }
   }
 }
 </style>

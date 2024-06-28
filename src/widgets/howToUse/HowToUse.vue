@@ -14,10 +14,26 @@
             battery with our friends. <br />
           </div>
           <div class="two-colums__image-column">
-            <img src="./assets/home-page.jpg" alt="Home page screen" />
-            <img src="./assets/settings-page.jpg" alt="Settings page screen" />
-            <img src="./assets/battery-page.jpg" alt="Battery page screen" />
-            <img src="./assets/charge-with-usdt-page.jpg" alt="Charge with usdt screen" />
+            <picture>
+              <source srcset="./assets/home-page.webp" type="image/webp" />
+              <source srcset="./assets/home-page.jpg" type="image/jpeg" />
+              <img src="./assets/home-page.jpg" alt="Home page screen" />
+            </picture>
+            <picture>
+              <source srcset="./assets/settings-page.webp" type="image/webp" />
+              <source srcset="./assets/settings-page.jpg" type="image/jpeg" />
+              <img src="./assets/settings-page.jpg" alt="Settings page screen" />
+            </picture>
+            <picture>
+              <source srcset="./assets/battery-page.webp" type="image/webp" />
+              <source srcset="./assets/battery-page.jpg" type="image/jpeg" />
+              <img src="./assets/battery-page.jpg" alt="Battery page screen" />
+            </picture>
+            <picture>
+              <source srcset="./assets/charge-with-usdt-page.webp" type="image/webp" />
+              <source srcset="./assets/charge-with-usdt-page.jpg" type="image/jpeg" />
+              <img src="./assets/charge-with-usdt-page.jpg" alt="Charge with usdt screen" />
+            </picture>
           </div>
         </div>
       </accordion-panel>
@@ -32,8 +48,16 @@
             3. And after click to the button your tokens will be return in one or few minutes.
           </div>
           <div class="two-colums__image-column">
-            <img src="./assets/battery-page.jpg" alt="Battery page screen" />
-            <img src="./assets/charge-history-page.jpg" alt="Battery page screen" />
+            <picture>
+              <source srcset="./assets/battery-page.webp" type="image/webp" />
+              <source srcset="./assets/battery-page.jpg" type="image/jpeg" />
+              <img src="./assets/battery-page.jpg" alt="Battery page screen" />
+            </picture>
+            <picture>
+              <source srcset="./assets/charge-history-page.webp" type="image/webp" />
+              <source srcset="./assets/charge-history-page.jpg" type="image/jpeg" />
+              <img src="./assets/charge-history-page.jpg" alt="Charge history page screen" />
+            </picture>
           </div>
         </div>
       </accordion-panel>

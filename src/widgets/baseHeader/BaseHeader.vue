@@ -92,7 +92,7 @@ useIsVisisble(header, () => {
     }
 
     @media screen and (max-width: 560px) {
-      font-size: 40px;
+      font-size: 38px;
     }
 
     &::after {

@@ -23,19 +23,7 @@ body {
   background: var(--main-body-bg-color);
   font-size: 16px;
   line-height: 1.5;
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 * {

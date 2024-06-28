@@ -1,7 +1,7 @@
 import 'normalize.css'
+import './fonts.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
-
-import '@fortawesome/fontawesome-free/css/all.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
 import { createApp, type Component } from 'vue'
 import { FontAwesomeIcon } from './app/config/fontawesome'
