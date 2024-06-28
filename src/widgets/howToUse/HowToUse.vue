@@ -64,7 +64,9 @@
       <accordion-panel>
         <template #title> Payment </template>
         And after charging you can use charge instead flee. App will ba automaticaly use less costs
-        option for you.
+        option for you. <br />
+        You can use it for gasless transactions in USDT, Notcoin and other tokens; NFT transfers;
+        replenishment of balance through in-app purchases or cryptocurrency.
       </accordion-panel>
     </div>
   </base-section>
