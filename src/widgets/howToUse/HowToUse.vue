@@ -8,9 +8,9 @@
         <div class="two-colums">
           <div class="two-colums__text-column">
             1. First of all we should download tonkeeper form Play Market/App store <br />
-            2. In Home Page we should click on the settings icon <br />
-            3. In settings we should see battery in menu and we can click it <br />
-            4. In battery page recharge battery with NOT, USDT and of course TON and we can share
+            2. On Home Page we should click on the settings icon <br />
+            3. On settings page we should see battery in menu and we can click on it <br />
+            4. On battery page recharge battery with NOT, USDT and of course TON and we can share
             battery with our friends. <br />
           </div>
           <div class="two-colums__image-column">
@@ -41,11 +41,11 @@
         <template #title> Battery Refund </template>
         <div class="two-colums">
           <div class="two-colums__text-column">
-            1. For refund you should open battery page and in battery page u4ypu should click to the
+            1. For refund you should open battery page and on battery page you should click on the
             charge history. <br />
-            2. In charge history page you will see your transaction and details button under
+            2. On charge history page you will see your transaction and details button under
             transation. (Sorry for russian language, feature still in beta =)) <br />
-            3. And after click to the button your tokens will be return in one or few minutes.
+            3. And after click on the button your tokens will be return in one or few minutes.
           </div>
           <div class="two-colums__image-column">
             <picture>
@@ -63,7 +63,7 @@
       </accordion-panel>
       <accordion-panel>
         <template #title> Payment </template>
-        And after charging you can use charge instead flee. App will ba automaticaly use less costs
+        After charging you can use charge instead of a flee. App will ba automaticaly use less costs
         option for you. <br />
         You can use it for gasless transactions in USDT, Notcoin and other tokens; NFT transfers;
         replenishment of balance through in-app purchases or cryptocurrency.

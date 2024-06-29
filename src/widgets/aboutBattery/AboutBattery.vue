@@ -14,7 +14,7 @@
           computational resources.
         </template>
       </base-tooltip>
-      and provide users with a smoother, more cost-effective experience when performing operations
+      and provides users with a smoother, more cost-effective experience when performing operations
       on the blockchain. Examples: <br />
       <span class="uppercase">
         Token swaps require ~50 charges, token transfers ~10 charges, and NFT transfers ~4 charges.
@@ -40,7 +40,7 @@ const list: Ref<TileItem[]> = ref([
       },
       {
         subtitle: 'Transaction Efficiency',
-        text: 'It ensures that transactions are processed with the least amount of gas necessary, reducing the overall cost of operations on the blockchain.'
+        text: 'It ensures that transactions are processed with the least necessary amount of gas, reducing the overall cost of operations on the blockchain.'
       }
     ]
   },
