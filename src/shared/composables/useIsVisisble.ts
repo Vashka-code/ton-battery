@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, ref, type Ref } from 'vue'
+import { onMounted, onUnmounted, type Ref } from 'vue'
 
 export const useIsVisisble = (element: Ref<HTMLElement | null>, callback: () => void) => {
   const observerCallback: IntersectionObserverCallback = (entries) => {

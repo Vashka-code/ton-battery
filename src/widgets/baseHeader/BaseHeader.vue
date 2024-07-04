@@ -12,8 +12,8 @@
 
 <script setup lang="ts">
 import BatteryAnimation from '@/entities/components/battery/BatteryAnimation.vue'
-import { useIsVisisble } from '@/entities/components/battery/composables/useIsVisisble'
-import { ref } from 'vue'
+import { useIsVisisble } from '@/shared/composables/useIsVisisble'
+import { onMounted, ref } from 'vue'
 import { useTypeAnimation } from './composable/useTypeAnimation'
 
 const featureText = ref('')
@@ -23,9 +23,11 @@ const header = ref<HTMLElement | null>(null)
 
 const animationDuration = ref(typingDelay * (featureFinalText.length + 2))
 
-useIsVisisble(header, () => {
-  useTypeAnimation(featureFinalText, typingDelay, (text) => {
-    featureText.value = text
+onMounted(() => {
+  useIsVisisble(header, () => {
+    useTypeAnimation(featureFinalText, typingDelay, (text) => {
+      featureText.value = text
+    })
   })
 })
 </script>

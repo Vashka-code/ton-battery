@@ -7,8 +7,8 @@
   ></div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useIsVisisble } from './composables/useIsVisisble'
+import { onMounted, ref } from 'vue'
+import { useIsVisisble } from '../../../shared/composables/useIsVisisble'
 
 const props = defineProps<{
   animationDuration: number
@@ -17,8 +17,10 @@ const props = defineProps<{
 const battery = ref<HTMLElement | null>(null)
 const isVisible = ref(false)
 
-useIsVisisble(battery, () => {
-  isVisible.value = true
+onMounted(() => {
+  useIsVisisble(battery, () => {
+    isVisible.value = true
+  })
 })
 </script>
 <style lang="scss" scoped>
