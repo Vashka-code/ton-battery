@@ -7,7 +7,7 @@
   ></div>
 </template>
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { useIsVisisble } from '../../../shared/composables/useIsVisisble'
 
 const props = defineProps<{
@@ -17,10 +17,8 @@ const props = defineProps<{
 const battery = ref<HTMLElement | null>(null)
 const isVisible = ref(false)
 
-onMounted(() => {
-  useIsVisisble(battery, () => {
-    isVisible.value = true
-  })
+useIsVisisble(battery, () => {
+  isVisible.value = true
 })
 </script>
 <style lang="scss" scoped>
